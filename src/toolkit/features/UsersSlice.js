@@ -12,6 +12,7 @@ export const usersListApi = createAsyncThunk(
       if (status === 200) {
         data.filter((obj, index) => {
           obj.img = require(`../../assets/images/${index + 1}.png`);
+          obj.favorite = false;
         });
 
         return data;
@@ -35,6 +36,11 @@ const usersListSlice = createSlice({
   name: "users",
   initialState,
   reducers: {
+    // setUserList action
+    setUserList: (state, { payload }) => {
+      state.usersList = payload;
+    },
+
     // resetStore action
     resetStore: (state, { payload }) => {
       state.usersList = [];
@@ -55,6 +61,6 @@ const usersListSlice = createSlice({
   },
 });
 
-export const { resetStore } = usersListSlice.actions;
+export const { setUserList, resetStore } = usersListSlice.actions;
 
 export default usersListSlice.reducer;

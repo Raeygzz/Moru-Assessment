@@ -1,1 +1,2 @@
-export * from "./dashboard/Dashboard";
+export * from "./dashboard/DashboardDetails";
+export * from "./modal/editUserDetail/EditUserDetailModal";

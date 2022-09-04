@@ -2,9 +2,7 @@ import React from "react";
 
 import { MailOutlined, PhoneOutlined, GlobalOutlined } from "@ant-design/icons";
 
-const Details = ({ value }) => {
-  // console.log("value ==> ", value);
-
+const DashboardDetails = ({ value }) => {
   return (
     <>
       <MailOutlined /> {value.email}
@@ -16,4 +14,4 @@ const Details = ({ value }) => {
   );
 };
 
-export { Details };
+export { DashboardDetails };

@@ -7,8 +7,7 @@
 ## Technology Stack
 
 - HTML5/CSS3
-- Ant Design
-- Ant Design Icon
+- Ant Design / Icon
 - React JS
 - Reduxjs/toolkit (State Management)
 - Other third party libraries as required
@@ -32,6 +31,10 @@ For yarn: `yarn start`
 - npx
 - yarn
 ```
+
+## Running the tests
+
+- yarn test --no-cache -u
 
 ## Built With
 
@@ -68,7 +71,8 @@ For yarn: `yarn start`
 "react-dom": "^18.2.0",
 "react-redux": "^8.0.2",
 "react-scripts": "5.0.1",
-"web-vitals": "^2.1.0"
+"web-vitals": "^2.1.0",
+"yup": "^0.32.11"
 ```
 
 ## devDependencies
@@ -76,6 +80,11 @@ For yarn: `yarn start`
 ```sh
 "redux-logger": "^3.0.6"
 ```
+
+# Test file
+
+- App.test.js
+- EditUserDetail.test.js
 
 # Notes
 

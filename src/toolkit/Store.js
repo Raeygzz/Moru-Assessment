@@ -1,4 +1,5 @@
 import { configureStore, combineReducers } from "@reduxjs/toolkit";
+
 import Logger from "redux-logger";
 
 import UsersReducer from "./features/UsersSlice";
