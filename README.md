@@ -50,7 +50,7 @@ For yarn: `yarn start`
 "resetCache": "npx react-native start --reset-cache",
 "start": "craco start",
 "build": "craco build",
-"test": "craco test",
+"test": "craco test --no-cache -u",
 "eject": "react-scripts eject"
 ```
 

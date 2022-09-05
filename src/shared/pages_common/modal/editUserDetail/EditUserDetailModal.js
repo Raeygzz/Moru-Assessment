@@ -48,7 +48,7 @@ const EditUserDetailModal = (props) => {
     let validPhone = await PhoneSchema.isValid({ phone: phone });
     validPhone ? setPhoneValidation(false) : setPhoneValidation(true);
 
-    if (phone.length === 10) {
+    if (phone.length != 10) {
       setPhoneValidation(true);
       return;
     }
@@ -80,9 +80,13 @@ const EditUserDetailModal = (props) => {
   // handleCancel
   const handleCancel = () => {
     setName("");
+    setNameValidation(false);
     setEmail("");
+    setEmailValidation(false);
     setPhone("");
+    setPhoneValidation(false);
     setWebsite("");
+    setWebsiteValidation(false);
 
     setOpen(false);
   };
