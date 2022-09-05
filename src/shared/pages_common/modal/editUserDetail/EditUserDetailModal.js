@@ -48,13 +48,13 @@ const EditUserDetailModal = (props) => {
     let validPhone = await PhoneSchema.isValid({ phone: phone });
     validPhone ? setPhoneValidation(false) : setPhoneValidation(true);
 
+    const validWebsite = await WebsiteSchema.isValid({ website: website });
+    validWebsite ? setWebsiteValidation(false) : setWebsiteValidation(true);
+
     if (phone.length != 10) {
       setPhoneValidation(true);
       return;
     }
-
-    const validWebsite = await WebsiteSchema.isValid({ website: website });
-    validWebsite ? setWebsiteValidation(false) : setWebsiteValidation(true);
 
     if (validName && validEmail && validPhone && validWebsite) {
       const finalUsersList = usersList.map((obj) => {
